@@ -21,12 +21,16 @@ class _ApiPageState extends State<ApiPage> {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
+          //Coluna
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            //animaçao
             AnimatedBuilder(
+                //SEe tiver valor na lista retorna um circulo de progresso
                 animation:
                     Listenable.merge([_controller.posts, _controller.isLoader]),
                 builder: (_, __) => _controller.isLoader.value
                     ? CircularProgressIndicator()
+                    //Depos lista os intens
                     : ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
