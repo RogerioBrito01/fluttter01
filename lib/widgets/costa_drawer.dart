@@ -30,9 +30,11 @@ class _CostaDrawerState extends State<CostaDrawer> {
               Navigator.of(context).pushNamed('/button');
             },
           ),
-          const ListTile(
-            title: Text('rota01'),
-          ),
+          ListTile(
+              title: Text('api'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/api');
+              }),
           const ListTile(
             title: Text('rota01'),
           )
